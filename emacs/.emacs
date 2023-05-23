@@ -57,3 +57,6 @@
 
 ;; FONTS
 (set-frame-font "JetBrainsMono 13" nil t)
+
+;; enable tabs
+(define-key c-mode-base-map "\t" 'self-insert-command)

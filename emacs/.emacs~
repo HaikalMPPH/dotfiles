@@ -23,7 +23,7 @@
    '("78e6be576f4a526d212d5f9a8798e5706990216e9be10174e3f3b015b8662e27" default))
  '(ispell-dictionary nil)
  '(package-selected-packages
-   '(monokai-theme eglot-java lua-mode company eglot evil cmake-mode)))
+   '(yaml-mode monokai-theme eglot-java lua-mode company eglot evil cmake-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
