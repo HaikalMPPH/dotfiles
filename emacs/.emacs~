@@ -37,10 +37,6 @@
 ;; DISABLE STARTUP MENU
 (setq inhibit-startup-screen t)
 
-;; COMPANY MODE
-;; init company mode at init
-(add-hook 'after-init-hook 'global-company-mode)
-
 ;; EGLOT LANGUAGE SERVER
 (require 'eglot)
 ;; C/C++
