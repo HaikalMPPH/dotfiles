@@ -36,3 +36,10 @@
 
 ;; DISABLE STARTUP MENU
 (setq inhibit-startup-screen t)
+
+;; EGLOT LANGUAGE SERVER
+(require 'eglot)
+;; C/C++
+(add-to-list 'eglot-server-programs '((c++-mode c-mode) "clangd"))
+(add-hook 'c-mode-hook 'eglot-ensure)
+(add-hook 'c++-mode-hook 'eglot-ensure)
