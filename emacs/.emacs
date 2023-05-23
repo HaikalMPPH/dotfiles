@@ -20,7 +20,7 @@
    ["black" "#d55e00" "#009e73" "#f8ec59" "#0072b2" "#cc79a7" "#56b4e9" "white"])
  '(custom-enabled-themes '(deeper-blue))
  '(ispell-dictionary nil)
- '(package-selected-packages '(lua-mode company eglot evil cmake-mode)))
+ '(package-selected-packages '(eglot-java lua-mode company eglot evil cmake-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -49,3 +49,5 @@
 ;; lua
 (add-to-list 'eglot-server-programs '((lua-mode) "lua-lsp"))
 (add-hook 'lua-mode-hook 'eglot-ensure)
+;; java
+(add-hook 'java-mode-hook 'eglot-java-mode)
