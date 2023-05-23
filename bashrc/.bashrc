@@ -158,3 +158,6 @@ export PATH=$HOME/Programs/nvim/bin:$PATH
 alias easyeffects='flatpak run com.github.wwmm.easyeffects'
 alias eclipse-cpp='Programs/eclipse/cpp-2023-03/eclipse/eclipse'
 alias emacs='emacs -nw'
+
+# sytem76-power battry saving mode
+system76-power profile battery
