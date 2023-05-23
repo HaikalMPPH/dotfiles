@@ -40,9 +40,12 @@
 ;; init company mode at init
 (add-hook 'after-init-hook 'global-company-mode)
 
-;; EGLOT LANGUAGE SERVER
+;;;; EGLOT LANGUAGE SERVER
 (require 'eglot)
 ;; C/C++
 (add-to-list 'eglot-server-programs '((c++-mode c-mode) "clangd"))
 (add-hook 'c-mode-hook 'eglot-ensure)
 (add-hook 'c++-mode-hook 'eglot-ensure)
+;; lua
+(add-to-list 'eglot-server-programs '((lua-mode) "lua-lsp"))
+(add-hook 'lua-mode-hook 'eglot-ensure)
