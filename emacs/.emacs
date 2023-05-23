@@ -1,4 +1,4 @@
-;; MELPA
+; MELPA
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
@@ -54,3 +54,6 @@
 (add-hook 'lua-mode-hook 'eglot-ensure)
 ;; java
 (add-hook 'java-mode-hook 'eglot-java-mode)
+
+;; FONTS
+(set-frame-font "JetBrainsMono 13" nil t)
