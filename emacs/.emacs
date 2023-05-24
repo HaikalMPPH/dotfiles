@@ -57,3 +57,7 @@
 
 ;; FONTS
 (set-frame-font "JetBrainsMono 13" nil t)
+
+;; LINE NUMBERS
+(display-line-numbers-mode)
+(setq display-line-numbers 'relative)
