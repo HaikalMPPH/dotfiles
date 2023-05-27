@@ -116,6 +116,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# .local/bin path
+export PATH=~/.local/bin:$PATH
+
 # Go
 #export PATH=$PATH:/usr/local/go/bin
 #export GOPATH=$PATH:/home/haikal-mpph/Documents/Personal\ Projects/Go\ Projects
