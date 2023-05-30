@@ -154,6 +154,9 @@ export PATH=Programs/nodejs/bin:$PATH
 # neovim
 export PATH=$HOME/Programs/nvim/bin:$PATH
 
+# eclipse IDE
+export PATH=$HOME/Programs/eclipse/:$PATH
+
 # xampp mysql
 # export PATH=/opt/lampp/bin:$PATH 
 
