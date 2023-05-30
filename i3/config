@@ -215,13 +215,14 @@ bar {
         colors {
                background $bg-color
                statusline $purple-color 
+                separator $cyan-color
 
                focused_workspace $orange-color $orange-color $bg-color 
               # active_workspace #32302f #32302f #ebdbb2 
                inactive_workspace $cyan-color $cyan-color $bg-color 
                urgent_workspace $red-color $red-color $bg-color 
         }
-        separator_symbol " "
+        separator_symbol "> | <"
 }
 
 # fix the blackscreen when using integrated graphics
