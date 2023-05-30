@@ -306,7 +306,7 @@ font:
   #  cyan:    '#8abeb7'
   #  white:   '#c5c8c6'
   normal:
-    black:   '0x2c2525'
+    black:   '0x72696a'
     red:     '0xfd6883'
     green:   '0xadda78'
     yellow:  '0xf9cc6c'
@@ -339,15 +339,15 @@ font:
   #
   # If the dim colors are not set, they will be calculated automatically based
   # on the `normal` colors.
-  #dim:
-  #  black:   '#131415'
-  #  red:     '#864343'
-  #  green:   '#777c44'
-  #  yellow:  '#9e824c'
-  #  blue:    '#556a7d'
-  #  magenta: '#75617b'
-  #  cyan:    '#5b7d78'
-  #  white:   '#828482'
+  dim:
+    black:   '0x72696a'
+    red:     '0xfd6883'
+    green:   '0xadda78'
+    yellow:  '0xf9cc6c'
+    blue:    '0xf38d70'
+    magenta: '0xa8a9eb'
+    cyan:    '0x85dacc'
+    white:   '0xfff1f3'
 
   # Indexed Colors
   #
