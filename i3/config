@@ -203,8 +203,8 @@ set $pink-color #fd5ff0
 
 # monokai theme
 client.focused          	$orange-color      $orange-color	$bg-color	$contrast-color	$contrast-color
-client.focused_inactive     $pink-color		   $pink-color	$bg-color	$bg-color	    $bg-color
-client.unfocused          	$purple-color      $purple-color	$bg-color	$bg-color	    $bg-color
+client.focused_inactive     $cyan-color		   $cyan-color	$bg-color	$bg-color	    $bg-color
+client.unfocused          	$yellow-color      $yellow-color	$bg-color	$bg-color	    $bg-color
 client.urgent         		$red-color		   $bg-color	$red-color	    $red-color      $red-color
 client.placeholder          $bg-color		   $bg-color	$yellow-color	$bg-color	    $bg-color
 client.background       	$fg-color
@@ -217,9 +217,9 @@ bar {
                statusline $purple-color 
                 separator $cyan-color
 
-               focused_workspace $yellow-color $yellow-color $bg-color 
+               focused_workspace $orange-color $orange-color $bg-color 
               # active_workspace #32302f #32302f #ebdbb2 
-               inactive_workspace $cyan-color $cyan-color $bg-color 
+               inactive_workspace $yellow-color $yellow-color $bg-color 
                urgent_workspace $red-color $red-color $bg-color 
         }
         separator_symbol "> | <"
