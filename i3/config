@@ -211,7 +211,7 @@ client.background       	$fg-color
 
 bar {
         status_command i3status
-        tray_output none
+        #tray_output none
         colors {
                background $bg-color
                statusline $purple-color 
@@ -229,7 +229,7 @@ bar {
 exec xrandr --auto
 
 # change background image
-exec --no-startup-id feh --bg-scale Pictures/neon-city.jpg 
+exec --no-startup-id feh --bg-scale Pictures/pixel-cyberpunk.png 
 # image link: https://raw.githubusercontent.com/potamides/dotfiles/77b2044e0c878df7cf03bcb717eea95b8204ff03/config/awesome/themes/gruvbox/wall_secondary.png
 
 # flameshot screenshot
@@ -239,7 +239,7 @@ exec --no-startup-id flameshot
 bindsym Print exec --no-startup-id flameshot gui
 
 # start a terminal in workspace 1
-exec --no-startup-id alacritty
+#exec --no-startup-id alacritty
 
 exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 
