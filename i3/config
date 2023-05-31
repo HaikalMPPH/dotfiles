@@ -203,7 +203,7 @@ set $pink-color #fd5ff0
 
 # monokai theme
 client.focused          	$orange-color      $orange-color	$bg-color	$contrast-color	$contrast-color
-client.focused_inactive     $cyan-color		   $cyan-color	$bg-color	$bg-color	    $bg-color
+client.focused_inactive     $red-color		   $red-color	$bg-color	$bg-color	    $bg-color
 client.unfocused          	$yellow-color      $yellow-color	$bg-color	$bg-color	    $bg-color
 client.urgent         		$red-color		   $bg-color	$red-color	    $red-color      $red-color
 client.placeholder          $bg-color		   $bg-color	$yellow-color	$bg-color	    $bg-color
