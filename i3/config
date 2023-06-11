@@ -245,3 +245,6 @@ exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 
 # start redshift
 # exec --no-startup-id redshift -O 5500
+
+# force floating for all new windows
+for_window [class="[.]*"] floating enable
