@@ -248,3 +248,6 @@ exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 
 # force floating for all new windows
 for_window [class="[.]*"] floating enable, resize set 800px 600px
+
+# misc startup
+exec --no-startup-id emacs --daemon
