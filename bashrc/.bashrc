@@ -7,9 +7,10 @@
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-PS1='
-[\u@\h \w] 
->\$ '
+PS1="
+
+\e[0;36m[\u@\h \w] \e[m 
+[\@] > \$ "
 
 ## CUSTOM ENV VARIABLE ##
 # Android Studio

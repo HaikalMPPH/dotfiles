@@ -229,7 +229,7 @@ bar {
 exec xrandr --auto
 
 # change background image
-exec --no-startup-id feh --bg-scale Pictures/pixel-cyberpunk.png 
+exec --no-startup-id feh --bg-scale /home/haikal-mpph/Pictures/pixelart-city.png 
 # image link: https://raw.githubusercontent.com/potamides/dotfiles/77b2044e0c878df7cf03bcb717eea95b8204ff03/config/awesome/themes/gruvbox/wall_secondary.png
 
 # flameshot screenshot
@@ -246,5 +246,9 @@ exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 # start redshift
 # exec --no-startup-id redshift -O 5500
 
+# enable gaps
+gaps inner 20
+gaps outer 5
+
 # force floating for all new windows
-for_window [class="[.]*"] floating enable, resize set 800px 600px
+# for_window [class="[.]*"] floating enable, resize set 800px 600px
