@@ -251,4 +251,4 @@ gaps inner 20
 gaps outer 5
 
 # force floating for all new windows
-# for_window [class="[.]*"] floating enable, resize set 800px 600px
+for_window [class="[.]*"] floating enable, resize set 800px 600px
