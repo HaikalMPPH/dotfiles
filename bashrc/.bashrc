@@ -15,3 +15,7 @@ PS1="
 ## CUSTOM ENV VARIABLE ##
 # Android Studio
 export PATH=$PATH:$HOME/Programs/android-studio/bin
+# steam Proton
+export PATH=$PATH:$HOME/.steam/steam/steamapps/common/Proton\ 8.0
+# Android SDK
+export PATH=$PATH:$HOME/Android/Sdk

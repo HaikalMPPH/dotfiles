@@ -247,8 +247,8 @@ exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 # exec --no-startup-id redshift -O 5500
 
 # enable gaps
-gaps inner 20
-gaps outer 5
+gaps inner 28
+gaps outer 4
 
 # force floating for all new windows
 #for_window [class="[.]*"] floating enable, resize set 800px 600px
