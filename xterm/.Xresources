@@ -1,0 +1,3 @@
+xterm*background: black
+xterm*foreground: lightgray
+xterm*faceName: Jetbrains Mono:size=10

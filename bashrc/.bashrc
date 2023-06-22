@@ -10,7 +10,7 @@ alias grep='grep --color=auto'
 PS1="
 
 \e[1;36m[\u@\h \w] \e[m 
-\e[0;32m[\@]\e[m > \$ "
+> \$ "
 
 ## CUSTOM ENV VARIABLE ##
 # Android Studio
