@@ -241,7 +241,7 @@ bindsym Print exec --no-startup-id flameshot gui
 # start a terminal in workspace 1
 #exec --no-startup-id alacritty
 
-exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
+exec xinput set-prop "ELAN050A:00 04F3:31B1 Touchpad"  "libinput Tapping Enabled" 1
 
 # start redshift
 # exec --no-startup-id redshift -O 5500
