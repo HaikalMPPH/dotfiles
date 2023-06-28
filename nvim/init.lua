@@ -26,7 +26,7 @@ vim.cmd([[
   set number
   set relativenumber
   syntax on
-  colorscheme nord
+  colorscheme monokai_pro
   set tabstop=2
   set shiftwidth=2
   set expandtab
