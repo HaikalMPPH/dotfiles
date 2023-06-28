@@ -201,12 +201,15 @@ set $purple-color #ae81ff
 set $cyan-color #78DCE8
 set $pink-color #fd5ff0
 
-# monokai theme
-client.focused          	$red-color      $red-color	$bg-color	$contrast-color	$contrast-color
-client.focused_inactive     $cyan-color		   $cyan-color	$bg-color	$bg-color	    $bg-color
-client.unfocused          	$purple-color      $purple-color	$bg-color	$bg-color	    $bg-color
-client.urgent         		$orange-color		   $bg-color	$red-color	    $red-color      $red-color
-client.placeholder          $bg-color		   $bg-color	$yellow-color	$bg-color	    $bg-color
+# window border
+default_border pixel 15
+
+# monokai theme           border          background      text            indicator      child-border
+client.focused          	$red-color      $red-color	    $bg-color       $red-color	   $red-color
+client.focused_inactive   $cyan-color		  $cyan-color	    $bg-color       $cyan-color	   $cyan-color
+client.unfocused          $purple-color   $purple-color	  $bg-color       $purple-color	 $purple-color
+client.urgent         		$orange-color		$bg-color	      $red-color      $red-color     $orange-color
+client.placeholder        $bg-color		    $bg-color	      $yellow-color   $bg-color	     $bg-color
 client.background       	$fg-color
 
 bar {
@@ -250,6 +253,7 @@ exec xinput set-prop "ELAN050A:00 04F3:31B1 Touchpad"  "libinput Tapping Enabled
 # enable gaps
 gaps inner 28
 gaps outer 4
+
 
 # force floating for all new windows
 #for_window [class="[.]*"] floating enable, resize set 800px 600px
