@@ -17,7 +17,7 @@ set $mod Mod4
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 #font pango:monospace 8 #DEFAULT
-font pango:JetBrainsMono Regular 8
+font pango:JetBrainsMono Bold 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -201,8 +201,12 @@ set $purple-color   #ae81ff
 set $cyan-color     #78DCE8
 set $pink-color     #fd5ff0
 
+# title alignment
+title_align center
+
 # window border
-default_border pixel 15
+default_border          normal 15
+default_floating_border normal 15
 
 # monokai theme           border          background      text            indicator      child-border
 client.focused          	$red-color      $red-color	    $bg-color       $red-color	   $red-color
@@ -213,8 +217,9 @@ client.placeholder        $bg-color		    $bg-color	      $yellow-color   $bg-col
 client.background       	$fg-color
 
 bar {
+        #i3bar_command i3bar --transparency
         status_command i3status
-        font pango:JetBrainsMono 10
+        font pango:JetBrainsMono Bold 8
         #tray_output none
         colors {
                background $bg-color
