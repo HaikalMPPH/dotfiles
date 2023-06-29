@@ -15,7 +15,3 @@ PS1="\e[1;35m[\$(cat /sys/class/power_supply/BAT1/capacity)%]\e[m\e[1;31m[\@]\e[
 ## CUSTOM ENV VARIABLE ##
 # Android Studio
 export PATH=$PATH:$HOME/Programs/android-studio/bin
-# steam Proton
-export PATH=$PATH:$HOME/.steam/steam/steamapps/common/Proton\ 8.0
-# Android SDK
-export PATH=$PATH:$HOME/.Android/Sdk
