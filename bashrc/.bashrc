@@ -9,7 +9,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
 # bash prompt
-PS1="\e[1;35m[\$(cat /sys/class/power_supply/BAT1/capacity)%]\e[m\e[1;31m[\@]\e[m\e[1;36m[\u@\h \w] \e[m 
+PS1="\e[1;35m[\$(cat /sys/class/power_supply/BAT1/capacity)%]\e[m\e[1;31m[\@]\e[m\e[1;36m[\u@\h \e[1;34m\w\e[m] \e[m 
 \e[1;32m> \$\e[m "
 
 ## CUSTOM ENV VARIABLE ##

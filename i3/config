@@ -258,7 +258,3 @@ exec xinput set-prop "ELAN050A:00 04F3:31B1 Touchpad"  "libinput Tapping Enabled
 # enable gaps
 gaps inner 28
 gaps outer 4
-
-
-# force floating for all new windows
-#for_window [class="[.]*"] floating enable, resize set 800px 600px
