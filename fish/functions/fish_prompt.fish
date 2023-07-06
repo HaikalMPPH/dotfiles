@@ -1,8 +1,9 @@
 function fish_prompt
-  set usrnm (whoami)
-  set dir   (pwd)
-  set bat   (echo (cat /sys/class/power_supply/BAT1/capacity)%)
+  set usrathost (echo (set_color cyan)'('(whoami)(set_color yellow)'@'(set_color red)(cat /etc/hostname)(set_color cyan)')')
+  set dir       (echo (set_color blue)'('(pwd)')')
+  set bat       (echo (set_color magenta)'('(cat /sys/class/power_supply/BAT1/capacity)'%'')')
   
-  echo -e "$(set_color green)$(printf '\u250f')$(set_color -o magenta)($bat)$(set_color -o cyan)($usrnm)$(set_color -o blue)($dir)"
-  echo "$(set_color -o green)$(printf '\u2517\u2501\u2501') \$ "
+  echo ''
+  echo -e "$(set_color green)$(printf '\u250f\u2501')$bat$usrathost$dir"
+  echo -e "$(set_color -o green)$(printf '\u2517\u2501\u2501') \$ "
 end
