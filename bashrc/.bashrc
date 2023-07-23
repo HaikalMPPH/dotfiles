@@ -9,9 +9,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
 # bash prompt
-PS1='
-\e[1;35m($(cat /sys/class/power_supply/BAT1/capacity)%)\e[m\e[1;31m(\@)\e[m\e[1;36m(\u@\h \e \e[1;34m\w\e[m\e[1;36m)\e[m
-\e[1;32m>\e[m \$ '
+export PS1="[\[\e[35m\]$(cat /sys/class/power_supply/BAT1/capacity)%\[\e[m\]][\[\e[36m\]\A\[\e[m\]][\[\e[31m\]\u\[\e[m\]\[\e[33m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]][\[\e[36m\]\W\[\e[m\]]\[\e[32m\]\n>\[\e[m\] \[\e[32m\]\\$\[\e[m\] "
 
 ## CUSTOM ENV VARIABLE ##
 # Android Studio
