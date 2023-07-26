@@ -18,6 +18,10 @@ require("lazy").setup({
   -- colorscheme
   "phanviet/vim-monokai-pro",
   "nordtheme/vim",
+  {
+    "nvim-telescope/telescope.nvim",
+    dependencies = { 'nvim-lua/plenary.nvim' }
+  },
 })
 
 ----------------------
@@ -27,8 +31,8 @@ vim.cmd([[
   set relativenumber
   syntax on
   colorscheme monokai_pro
-  set tabstop=2
-  set shiftwidth=2
+  set tabstop=4
+  set shiftwidth=4
   set expandtab
   set termguicolors
   set clipboard+=unnamedplus
@@ -36,3 +40,10 @@ vim.cmd([[
 
 -- leader keys
 vim.g.mapleader = " "
+
+-- Telescope key binds
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
