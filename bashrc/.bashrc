@@ -16,3 +16,5 @@ PS1="[\[\e[35m\]\$(cat /sys/class/power_supply/BAT1/capacity)%\[\e[m\]][\[\e[36m
 export PATH=$PATH:$HOME/Programs/android-studio/bin
 # Godot
 export PATH=$PATH:$HOME/Programs/Godot
+# Eclipse java
+export PATH=$PATH:$HOME/Programs/eclipse/java-2023-06/eclipse
