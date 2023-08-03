@@ -206,7 +206,7 @@ title_align center
 
 # window border
 default_border          normal 15
-default_floating_border normal 15
+default_floating_border normal 12
 
 # monokai theme           border          background      text            indicator      child-border
 client.focused          	$red-color      $red-color	    $bg-color       $red-color	   $red-color
@@ -256,5 +256,5 @@ exec xinput set-prop "ELAN050A:00 04F3:31B1 Touchpad"  "libinput Tapping Enabled
 # exec --no-startup-id redshift -O 5500
 
 # enable gaps
-gaps inner 28
-gaps outer 4
+gaps inner 10
+gaps outer 2
