@@ -256,5 +256,5 @@ exec xinput set-prop "ELAN050A:00 04F3:31B1 Touchpad"  "libinput Tapping Enabled
 # exec --no-startup-id redshift -O 5500
 
 # enable gaps
-gaps inner 10
-gaps outer 2
+gaps inner 20
+gaps outer 10
