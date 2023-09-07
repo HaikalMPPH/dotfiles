@@ -237,8 +237,11 @@ bar {
 exec xrandr --auto
 
 # change background image
-exec --no-startup-id feh --bg-scale /home/haikal-mpph/Pictures/wallpaperflare-cyberpunk1.png 
+#exec --no-startup-id feh --bg-scale /home/haikal-mpph/Pictures/wallpaperflare-cyberpunk1.png 
 # image link: https://raw.githubusercontent.com/potamides/dotfiles/77b2044e0c878df7cf03bcb717eea95b8204ff03/config/awesome/themes/gruvbox/wall_secondary.png
+# .:: randomize dynamic wallpaper ::.
+exec --no-startup-id watch -n 300 feh --randomize --bg-scale ~/Pictures/*
+
 
 # flameshot screenshot
 exec --no-startup-id flameshot
@@ -256,5 +259,5 @@ exec xinput set-prop "ELAN050A:00 04F3:31B1 Touchpad"  "libinput Tapping Enabled
 # exec --no-startup-id redshift -O 5500
 
 # enable gaps
-gaps inner 20
-gaps outer 10
+gaps inner 40
+#gaps outer 10
