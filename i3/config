@@ -190,16 +190,27 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 
 # monokai color
-set $fg-color       #fdfff1
-set $bg-color       #272821
+# set $fg-color       #fdfff1
+# set $bg-color       #272821
+# set $contrast-color #3b3c35
+# set $red-color      #f82570
+# set $green-color    #a6e12d
+# set $yellow-color   #e4db73
+# set $orange-color   #fc961f
+# set $purple-color   #ae81ff
+# set $cyan-color     #78DCE8
+# set $pink-color     #fd5ff0
+
+# gruvbox color
+set $fg-color       #ebdbb2
+set $bg-color       #282828
 set $contrast-color #3b3c35
-set $red-color      #f82570
-set $green-color    #a6e12d
-set $yellow-color   #e4db73
-set $orange-color   #fc961f
-set $purple-color   #ae81ff
-set $cyan-color     #78DCE8
-set $pink-color     #fd5ff0
+set $red-color      #cc241d
+set $green-color    #98971a
+set $yellow-color   #d79921
+set $orange-color   #d65d0e
+set $purple-color   #b16286
+set $cyan-color     #458588
 
 # title alignment
 title_align center
@@ -208,13 +219,13 @@ title_align center
 default_border          normal 15
 default_floating_border normal 12
 
-# monokai theme           border          background      text            indicator      child-border
-client.focused          	$red-color      $red-color	    $bg-color       $red-color	   $red-color
-client.focused_inactive   $cyan-color		  $cyan-color	    $bg-color       $cyan-color	   $cyan-color
-client.unfocused          $purple-color   $purple-color	  $bg-color       $purple-color	 $purple-color
-client.urgent         		$orange-color		$bg-color	      $red-color      $red-color     $orange-color
-client.placeholder        $bg-color		    $bg-color	      $yellow-color   $bg-color	     $bg-color
-client.background       	$fg-color
+# monokai theme           border          background      text            indicator      	child-border
+client.focused            $cyan-color     $cyan-color	  $bg-color       $cyan-color	   	$cyan-color
+client.focused_inactive   $yellow-color	  $yellow-color	  $bg-color       $yellow-color	   	$yellow-color
+client.unfocused          $green-color    $green-color	  $bg-color       $green-color	 	$green-color
+client.urgent         	  $red-color	  $bg-color	  $bg-color       $red-color     	$red-color
+client.placeholder        $bg-color	  $bg-color	  $yellow-color   $bg-color	     	$bg-color
+client.background         $fg-color
 
 bar {
         #i3bar_command i3bar --transparency
@@ -238,7 +249,6 @@ exec xrandr --auto
 
 # change background image
 #exec --no-startup-id feh --bg-scale /home/haikal-mpph/Pictures/wallpaperflare-cyberpunk1.png 
-# image link: https://raw.githubusercontent.com/potamides/dotfiles/77b2044e0c878df7cf03bcb717eea95b8204ff03/config/awesome/themes/gruvbox/wall_secondary.png
 # .:: randomize dynamic wallpaper ::.
 exec --no-startup-id watch -n 300 feh --randomize --bg-scale ~/Pictures/*
 
