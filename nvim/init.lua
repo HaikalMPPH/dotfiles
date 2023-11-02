@@ -18,6 +18,7 @@ require("lazy").setup({
   -- colorscheme
   "phanviet/vim-monokai-pro",
   "nordtheme/vim",
+  "ellisonleao/gruvbox.nvim",   -- gruvbox
   {
     "nvim-telescope/telescope.nvim",
     dependencies = { 'nvim-lua/plenary.nvim' }
@@ -39,7 +40,7 @@ vim.cmd([[
   set number
   set relativenumber
   syntax on
-  colorscheme monokai_pro
+  colorscheme gruvbox
   set tabstop=2
   set shiftwidth=2
   set expandtab

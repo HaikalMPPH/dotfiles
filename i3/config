@@ -220,9 +220,9 @@ default_border          normal 15
 default_floating_border normal 12
 
 # monokai theme           border          background      text            indicator      	child-border
-client.focused            $cyan-color     $cyan-color	  $bg-color       $cyan-color	   	$cyan-color
-client.focused_inactive   $yellow-color	  $yellow-color	  $bg-color       $yellow-color	   	$yellow-color
-client.unfocused          $green-color    $green-color	  $bg-color       $green-color	 	$green-color
+client.focused            $green-color    $green-color	  $bg-color       $green-color	  $green-color
+client.focused_inactive   $yellow-color	  $yellow-color	  $bg-color       $yellow-color	  $yellow-color
+client.unfocused          $cyan-color    $cyan-color	  $bg-color       $cyan-color	 	$cyan-color
 client.urgent         	  $red-color	  $bg-color	  $bg-color       $red-color     	$red-color
 client.placeholder        $bg-color	  $bg-color	  $yellow-color   $bg-color	     	$bg-color
 client.background         $fg-color
@@ -250,7 +250,8 @@ exec xrandr --auto
 # change background image
 #exec --no-startup-id feh --bg-scale /home/haikal-mpph/Pictures/wallpaperflare-cyberpunk1.png 
 # .:: randomize dynamic wallpaper ::.
-exec --no-startup-id watch -n 300 feh --randomize --bg-scale ~/Pictures/*
+#exec --no-startup-id watch -n 300 feh --randomize --bg-scale ~/Pictures/
+exec --no-startup-id watch -n 300 nitrogen --random --set-scaled ~/Pictures/
 
 
 # flameshot screenshot
