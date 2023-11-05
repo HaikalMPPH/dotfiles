@@ -12,7 +12,8 @@ alias grep='grep --color=auto'
 alias bri='sudo brightnessctl set'
 alias limbat='sudo insmod $HOME/Programs/acer-wmi-battery/acer-wmi-battery.ko enable_health_mode=1'
 
-# Custom Function
+## Custom Function
+# make acer-wmi-battery
 limbat-make() {
   cd $HOME/Programs/acer-wmi-battery/;
   make;
@@ -31,4 +32,5 @@ export PATH=$PATH:$HOME/Programs/Godot
 export PATH=$PATH:$HOME/Programs/eclipse/java-2023-06/eclipse
 
 # custom directory variable
-export tgs=$HOME/Documents/Personal/Tugas
+export tgs=$HOME/Documents/personal/tugas
+export proj=$HOME/Documents/personal/projects
