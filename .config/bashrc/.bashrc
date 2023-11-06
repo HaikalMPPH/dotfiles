@@ -8,9 +8,10 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
-# Custom alias
+## Custom alias
 alias bri='sudo brightnessctl set'
 alias limbat='sudo insmod $HOME/Programs/acer-wmi-battery/acer-wmi-battery.ko enable_health_mode=1'
+alias clr-trash='rm -r .local/share/Trash/files/*'
 
 ## Custom Function
 # make acer-wmi-battery
