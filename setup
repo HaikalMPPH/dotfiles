@@ -1,2 +1,2 @@
 #!/bin/bash
-cp .config $HOME/
+cp -r .config $HOME/
