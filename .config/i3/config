@@ -234,7 +234,7 @@ bar {
         #tray_output none
         colors {
                background $bg-color
-               statusline $purple-color 
+               statusline $fg-color 
                separator  $cyan-color
 
                focused_workspace  $orange-color   $orange-color   $bg-color 
@@ -270,5 +270,4 @@ exec xinput set-prop "ELAN050A:00 04F3:31B1 Touchpad"  "libinput Tapping Enabled
 # exec --no-startup-id redshift -O 5500
 
 # enable gaps
-gaps inner 40
-#gaps outer 10
+gaps inner 20

@@ -10,14 +10,22 @@ alias grep='grep --color=auto'
 
 ## Custom alias
 alias bri='sudo brightnessctl set'
-alias limbat='sudo insmod $HOME/Programs/acer-wmi-battery/acer-wmi-battery.ko enable_health_mode=1'
+alias limbat='sudo rmmod $HOME/Programs/acer-wmi-battery/acer-wmi-battery.ko; sudo insmod $HOME/Programs/acer-wmi-battery/acer-wmi-battery.ko enable_health_mode=1'
+alias limbat-remove='sudo rmmod $HOME/Programs/acer-wmi-battery/acer-wmi-battery.ko; sudo insmod $HOME/Programs/acer-wmi-battery/acer-wmi-battery.ko enable_health_mode=0'
 alias clr-trash='rm -r .local/share/Trash/files/*'
+alias readmode='redshift -O 4500'
+alias readmode-disable='redshift -x'
 
 ## Custom Function
 # make acer-wmi-battery
 limbat-make() {
   cd $HOME/Programs/acer-wmi-battery/;
   make;
+  cd -;
+}
+limbat-make-clean() {
+  cd $HOME/Programs/acer-wmi-battery/;
+  make clean;
   cd -;
 }
 
