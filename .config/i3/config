@@ -216,10 +216,11 @@ set $cyan-color     #458588
 title_align center
 
 # window border
-default_border          normal 15
-default_floating_border normal 12
+default_border          pixel 1
+default_floating_border pixel 1
 
-# monokai theme           border          background      text            indicator      	child-border
+
+# gruvbox theme           border          background      text            indicator      	child-border
 client.focused            $green-color    $green-color	  $bg-color       $green-color	  $green-color
 client.focused_inactive   $yellow-color	  $yellow-color	  $bg-color       $yellow-color	  $yellow-color
 client.unfocused          $cyan-color    $cyan-color	  $bg-color       $cyan-color	 	$cyan-color

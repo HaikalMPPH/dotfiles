@@ -20,8 +20,8 @@ require("lazy").setup({
   "nordtheme/vim",
   "ellisonleao/gruvbox.nvim",   -- gruvbox
   {
-    "nvim-telescope/telescope.nvim",
-    dependencies = { 'nvim-lua/plenary.nvim' }
+   -- "nvim-telescope/telescope.nvim",
+    --dependencies = { 'nvim-lua/plenary.nvim' }
   },
   "bfrg/vim-cpp-modern",
   "neovim/nvim-lspconfig",
@@ -33,7 +33,7 @@ require("lazy").setup({
   'L3MON4D3/LuaSnip',
   'saadparwaiz1/cmp_luasnip',
   -- basic autocomplete
-  --'vim-scripts/AutoComplPop',
+  'vim-scripts/AutoComplPop',
 })
 
 ----------------------
@@ -44,24 +44,25 @@ vim.cmd([[
   syntax on
   colorscheme gruvbox
   set tabstop=4
-  set shiftwidth=4
+  "set shiftwidth=4
   set expandtab
   set termguicolors
   set clipboard+=unnamedplus
   set complete+=kspell
   set completeopt=menuone,longest,noinsert
   tnoremap <Esc> <C-\><C-n>
+  inoremap <C-Space> <C-p>
 ]])
 
 -- leader keys
 vim.g.mapleader = " "
 
 -- Telescope key binds
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+--  local builtin = require('telescope.builtin')
+--  vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+--  vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+--  vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+--  vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 
 --  -- nvim cmp

@@ -1,0 +1,8 @@
+XTerm.vt100.locale: true
+XTerm.vt100.metaSendsEscape: true
+XTerm.vt100.reverseVideo: true
+
+XTerm.vt100.faceName: Mx437 IBM PGC:style=Regular:size=14:antialias=true
+
+Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
