@@ -1,14 +1,14 @@
 XTerm.vt100.locale: true
 XTerm.vt100.metaSendsEscape: true
-XTerm.vt100.reverseVideo: true
+!XTerm.vt100.reverseVideo: true
 xTerm.vt100.backarrowKey: false
 xTerm.ttyModes: erase ^?
 
 XTerm.vt100.faceName: Perfect DOS VGA 437 Win:style=Regular:size=15:antialias=true
 
-*background: #ebdbb2
+*background: #32302f 
 ! soft contrast: *background: #32302f
-*foreground: #282828
+*foreground: #ebdbb2
 ! Black + DarkGrey
 *color0:  #282828
 *color8:  #928374
