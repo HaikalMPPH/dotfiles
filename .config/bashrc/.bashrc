@@ -43,3 +43,4 @@ export PATH=$PATH:$HOME/Programs/eclipse/java-2023-06/eclipse
 # custom directory variable
 export tgs=$HOME/Documents/personal/tugas
 export proj=$HOME/Documents/personal/projects
+export notes=$HOME/Documents/personal/notes
