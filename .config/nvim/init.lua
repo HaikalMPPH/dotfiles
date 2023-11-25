@@ -43,8 +43,8 @@ vim.cmd([[
   set relativenumber
   syntax on
   colorscheme gruvbox
-  set tabstop=4
-  set shiftwidth=4
+  set tabstop=2
+  set shiftwidth=2
   set expandtab
   set termguicolors
   set clipboard+=unnamedplus
