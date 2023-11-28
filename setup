@@ -1,3 +1,5 @@
 #!/bin/bash
 cp -r .config $HOME/
 cp xterm/.Xresources $HOME/
+ln -s emacs/.emacs.d -t $HOME/
+ln emacs/.emacs -t $HOME/
