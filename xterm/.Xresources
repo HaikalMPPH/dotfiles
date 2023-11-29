@@ -4,7 +4,7 @@ XTerm.vt100.metaSendsEscape: true
 xTerm.vt100.backarrowKey: false
 xTerm.ttyModes: erase ^?
 
-XTerm.vt100.faceName: Perfect DOS VGA 437 Win:style=Regular:size=15:antialias=true
+XTerm.vt100.faceName: JetBrainsMono:style=Regular:size=12:antialias=true
 
 *background: #32302f 
 ! soft contrast: *background: #32302f
