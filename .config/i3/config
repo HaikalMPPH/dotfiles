@@ -50,7 +50,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec kitty #alacritty
+bindsym $mod+Return exec xterm #kitty #alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -104,7 +104,7 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-#bindsym $mod+Shift+f fullscreen toggle
+bindsym $mod+Shift+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -225,8 +225,11 @@ set $cyan-color     #458588
 title_align center
 
 # window border
-default_border          pixel 1
+# default_border          pixel 1
 default_floating_border normal 10
+
+# windows will be floating by default
+for_window [all] floating enable
 
 
 # gruvbox theme           border          background      text            indicator      	child-border
@@ -238,21 +241,24 @@ client.placeholder        $bg-color	  $bg-color	  $yellow-color   $bg-color	    
 client.background         $fg-color
 
 bar {
-        #i3bar_command i3bar --transparency
+       #i3bar_command i3bar --transparency
         status_command i3status
         font pango:JetBrainsMono Regular 8
-        #tray_output none
-        colors {
-               background $bg-color
-               statusline $fg-color 
-               separator  $cyan-color
+       #tray_output none
+       colors {
+              background $bg-color
+              statusline $fg-color 
+              separator  $cyan-color
 
-               focused_workspace  $orange-color   $orange-color   $bg-color 
-               inactive_workspace $yellow-color   $yellow-color   $bg-color 
-               urgent_workspace   $red-color      $red-color      $bg-color 
-        }
-        separator_symbol "   "
+              focused_workspace  $orange-color   $orange-color   $bg-color 
+              inactive_workspace $yellow-color   $yellow-color   $bg-color 
+              urgent_workspace   $red-color      $red-color      $bg-color 
+       }
+       separator_symbol "   "
 }
+
+#polybar
+#exec --no-startup-id polybar
 
 # fix the blackscreen when using integrated graphics
 exec xrandr --auto
@@ -261,7 +267,7 @@ exec xrandr --auto
 #exec --no-startup-id feh --bg-scale /home/haikal-mpph/Pictures/wallpaperflare-cyberpunk1.png 
 # .:: randomize dynamic wallpaper ::.
 #exec --no-startup-id watch -n 300 feh --randomize --bg-scale ~/Pictures/
-exec --no-startup-id watch -n 300 nitrogen --random --set-scaled ~/Pictures/
+exec --no-startup-id watch -n 300 nitrogen --random --set-scaled ~/Pictures/Wallpaper/
 
 
 # flameshot screenshot
