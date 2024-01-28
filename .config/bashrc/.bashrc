@@ -37,7 +37,7 @@ stats() {
 # bash prompt
 #PS1="[\[\e[35m\]\$(cat /sys/class/power_supply/BAT1/capacity)%\[\e[m\]][\[\e[36m\]\A\[\e[m\]][\[\e[31m\]\u\[\e[m\]\[\e[33m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]][\[\e[36m\]\w\[\e[m\]]\[\e[32m\]\n>\[\e[m\] \[\e[32m\]\\$\[\e[m\] "
 
-PS1="\w > \$ "
+PS1="\n\w > \$ "
 
 ## CUSTOM ENV VARIABLE ##
 # Android Studio
@@ -46,6 +46,10 @@ export PATH=$PATH:$HOME/Programs/android-studio/bin
 export PATH=$PATH:$HOME/Programs/Godot
 # Eclipse java
 export PATH=$PATH:$HOME/Programs/eclipse/java-2023-06/eclipse
+# home .local directory
+export PATH=$PATH:$HOME/.local/bin
+# default browser (using CLI)
+export BROWSER=lynx
 
 # custom directory variable
 export tgs=$HOME/Documents/personal/tugas
