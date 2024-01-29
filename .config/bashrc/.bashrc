@@ -49,7 +49,7 @@ export PATH=$PATH:$HOME/Programs/eclipse/java-2023-06/eclipse
 # home .local directory
 export PATH=$PATH:$HOME/.local/bin
 # default browser (using CLI)
-export BROWSER=lynx
+export BROWSER=links
 
 # custom directory variable
 export tgs=$HOME/Documents/personal/tugas
