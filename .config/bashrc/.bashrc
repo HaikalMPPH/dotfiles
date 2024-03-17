@@ -15,6 +15,8 @@ alias limbat-disable='sudo rmmod $HOME/Programs/acer-wmi-battery/acer-wmi-batter
 alias clr-trash='rm -r .local/share/Trash/files/*'
 alias readmode='redshift -O 3000'
 alias readmode-disable='redshift -x'
+# Reminder
+alias remind="~/remind"
 
 ## Custom Function
 # make acer-wmi-battery
