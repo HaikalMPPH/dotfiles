@@ -39,9 +39,9 @@ stats() {
 # bash prompt
 #PS1="[\[\e[35m\]\$(cat /sys/class/power_supply/BAT1/capacity)%\[\e[m\]][\[\e[36m\]\A\[\e[m\]][\[\e[31m\]\u\[\e[m\]\[\e[33m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]][\[\e[36m\]\w\[\e[m\]]\[\e[32m\]\n>\[\e[m\] \[\e[32m\]\\$\[\e[m\] "
 
-GRE="\e[32m"
-CYA="\e[36m"
-MAG="\e[35m"
+GRE="32"
+CYA="36"
+MAG="35"
 B_MAG="\e[1;${MAG}m"
 B_GRE="\e[1;${GRE}m"
 B_CYA="\e[1;${CYA}m"
