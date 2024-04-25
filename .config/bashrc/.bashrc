@@ -42,12 +42,13 @@ stats() {
 GRE="32"
 CYA="36"
 MAG="35"
-B_MAG="\e[1;${MAG}m"
-B_GRE="\e[1;${GRE}m"
-B_CYA="\e[1;${CYA}m"
-END_COLOR="\e[0m"
+B_MAG="\[\e[1;${MAG}m\]"
+B_GRE="\[\e[1;${GRE}m\]"
+B_CYA="\[\e[1;${CYA}m\]"
+END_COLOR="\[\e[0m\]"
 
-PS1="${B_CYA}\n\w${END_COLOR} ${B_MAG}>${END_COLOR} ${B_GRE}\$${END_COLOR} "
+PS1="${B_CYA}\w${END_COLOR} ${B_MAG}>${END_COLOR} ${B_GRE}\$${END_COLOR} "
+#PS1="\n\w > \$ "
 
 ## CUSTOM ENV VARIABLE ##
 # Android Studio
