@@ -1,4 +1,0 @@
-#!/bin/bash
-cp -r .config $HOME/
-cp xterm/.Xresources $HOME/
-cp emacs/.emacs $HOME/
