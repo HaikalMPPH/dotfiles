@@ -59,8 +59,8 @@ export PATH=$PATH:$HOME/Programs/Godot
 export PATH=$PATH:$HOME/Programs/eclipse/java-2023-06/eclipse
 # home .local directory
 export PATH=$PATH:$HOME/.local/bin
-# default browser (using CLI)
-export BROWSER=links
+# Fix Valgrind (uncomment if the error occures)
+#export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
 
 # custom directory variable
 export tgs=$HOME/Documents/personal/tugas
