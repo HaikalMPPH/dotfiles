@@ -20,8 +20,8 @@ require("lazy").setup({
   "nordtheme/vim",
   "ellisonleao/gruvbox.nvim",   -- gruvbox
   {
-   -- "nvim-telescope/telescope.nvim",
-    --dependencies = { 'nvim-lua/plenary.nvim' }
+    "nvim-telescope/telescope.nvim",
+    dependencies = { 'nvim-lua/plenary.nvim' }
   },
   "bfrg/vim-cpp-modern",
   "neovim/nvim-lspconfig",
@@ -30,9 +30,10 @@ require("lazy").setup({
   'hrsh7th/cmp-path',
   'hrsh7th/cmp-cmdline',
   'hrsh7th/nvim-cmp',
-  'L3MON4D3/LuaSnip',
-  'saadparwaiz1/cmp_luasnip',
+  --'L3MON4D3/LuaSnip',
+  --'saadparwaiz1/cmp_luasnip',
   'vim-scripts/AutoComplPop',
+  'godlygeek/tabular'
 })
 
 ----------------------
@@ -47,23 +48,22 @@ vim.cmd([[
   set expandtab
   set termguicolors
   set clipboard+=unnamedplus
-  set complete+=kspell
-  set completeopt=menuone,longest,noinsert
+  set complete+=kspell,.,w,b,u,t,i,d
+  set completeopt=menuone,noinsert,preview,menu
   tnoremap <Esc> <C-\><C-n>
   inoremap <C-Space> <C-p>
   set colorcolumn=80
-
 ]])
 
 -- leader keys
 vim.g.mapleader = " "
 
--- Telescope key binds
---local builtin = require('telescope.builtin')
---vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
---vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
---vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
---vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+-- Telescope.nvim key binds
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 
 ---- nvim cmp

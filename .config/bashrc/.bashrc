@@ -2,6 +2,8 @@
 # ~/.bashrc
 #
 
+# for Valgrind
+source /etc/profile.d/debuginfod.sh
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -59,7 +61,7 @@ export PATH=$PATH:$HOME/Programs/Godot
 export PATH=$PATH:$HOME/Programs/eclipse/java-2023-06/eclipse
 # home .local directory
 export PATH=$PATH:$HOME/.local/bin
-# Fix Valgrind (uncomment if the error occures)
+# Fix Valgrind (uncomment if the error occures and comment the below unset)
 #export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
 
 # custom directory variable
