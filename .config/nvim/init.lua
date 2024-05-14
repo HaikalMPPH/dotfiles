@@ -3,12 +3,12 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
+    "git"                                    ,
+    "clone"                                  ,
+    "--filter=blob:none"                     ,
+    "https://github.com/folke/lazy.nvim.git" ,
+    "--branch=stable"                        , -- latest stable release
+    lazypath                                 ,
   })
 end
 vim.opt.rtp:prepend(lazypath)
@@ -16,43 +16,57 @@ vim.opt.rtp:prepend(lazypath)
 -- lazy nvim plugins
 require("lazy").setup({
   -- colorscheme
-  "phanviet/vim-monokai-pro",
-  "nordtheme/vim",
-  "ellisonleao/gruvbox.nvim",   -- gruvbox
+  "hzchirs/vim-material"                       ,
+  "phanviet/vim-monokai-pro"                   ,
+  "nordtheme/vim"                              ,
+  "ellisonleao/gruvbox.nvim"                   , -- gruvbox
   {
-    "nvim-telescope/telescope.nvim",
+    "nvim-telescope/telescope.nvim"            ,
     dependencies = { 'nvim-lua/plenary.nvim' }
-  },
-  "bfrg/vim-cpp-modern",
-  "neovim/nvim-lspconfig",
-  'hrsh7th/cmp-nvim-lsp',
-  'hrsh7th/cmp-buffer',
-  'hrsh7th/cmp-path',
-  'hrsh7th/cmp-cmdline',
-  'hrsh7th/nvim-cmp',
-  --'L3MON4D3/LuaSnip',
-  --'saadparwaiz1/cmp_luasnip',
-  'vim-scripts/AutoComplPop',
+  }                                            ,
+  "bfrg/vim-cpp-modern"                        ,
+  "neovim/nvim-lspconfig"                      ,
+  "williamboman/mason.nvim"                    ,
+  "williamboman/mason-lspconfig.nvim"          ,
+  'hrsh7th/cmp-nvim-lsp'                       ,
+  'hrsh7th/cmp-buffer'                         ,
+  'hrsh7th/cmp-path'                           ,
+  'hrsh7th/cmp-cmdline'                        ,
+  'hrsh7th/nvim-cmp'                           ,
+  'vim-scripts/AutoComplPop'                   ,
   'godlygeek/tabular'
 })
 
 ----------------------
 ---- vim commands ----
 vim.cmd([[
-  set number
-  set relativenumber
-  syntax on
-  colorscheme gruvbox
-  set tabstop=2
-  set shiftwidth=2
-  set expandtab
-  set termguicolors
-  set clipboard+=unnamedplus
-  set complete+=kspell,.,w,b,u,t,i,d
-  set completeopt=menuone,noinsert,preview,menu
-  tnoremap <Esc> <C-\><C-n>
-  inoremap <C-Space> <C-p>
-  set colorcolumn=80
+  set           number
+  set           relativenumber
+  syntax        on
+  colorscheme   vim-material
+  set           tabstop=4
+  set           shiftwidth=4
+  set           expandtab
+  set           termguicolors
+  set           clipboard+=unnamedplus
+  set           complete+=kspell,.,w,b,u,t,i,d
+  set           completeopt=menuone,noinsert,preview,menu
+  tnoremap      <Esc>                                       <C-\><C-n>
+  inoremap      <C-Space>                                   <C-p>
+  set           colorcolumn=100
+  set           background=light
+  set           nowrap
+
+  nnoremap      <M-1> :tabn 1<CR>
+  nnoremap      <M-2> :tabn 2<CR>
+  nnoremap      <M-3> :tabn 3<CR>
+  nnoremap      <M-4> :tabn 4<CR>
+  nnoremap      <M-5> :tabn 5<CR>
+  nnoremap      <M-6> :tabn 6<CR>
+  nnoremap      <M-7> :tabn 7<CR>
+  nnoremap      <M-8> :tabn 8<CR>
+  nnoremap      <M-9> :tabn 9<CR>
+  nnoremap      <M-0> :tabn 0<CR>
 ]])
 
 -- leader keys
@@ -60,56 +74,12 @@ vim.g.mapleader = " "
 
 -- Telescope.nvim key binds
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+vim.keymap.set('n' , '<leader>ff' , builtin.find_files , {})
+vim.keymap.set('n' , '<leader>fg' , builtin.live_grep  , {})
+vim.keymap.set('n' , '<leader>fb' , builtin.buffers    , {})
+vim.keymap.set('n' , '<leader>fh' , builtin.help_tags  , {})
 
 
----- nvim cmp
---local cmp = require'cmp'
--- cmp.setup({
---    snippet = {
---      -- REQUIRED - you must specify a snippet engine
---      expand = function(args)
---        --vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
---        require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
---        -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
---        -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
---      end,
---    },
---    window = {
---      completion = cmp.config.window.bordered(),
---      documentation = cmp.config.window.bordered(),
---    },
---    mapping = cmp.mapping.preset.insert({
---      ['<C-b>'] = cmp.mapping.scroll_docs(-4),
---      ['<C-f>'] = cmp.mapping.scroll_docs(4),
---      ['<C-Space>'] = cmp.mapping.complete(),
---      ['<C-e>'] = cmp.mapping.abort(),
---      ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
---    }),
---    sources = cmp.config.sources({
---      { name = 'nvim_lsp' },
---      -- { name = 'vsnip' }, -- For vsnip users.
---      { name = 'luasnip' }, -- For luasnip users.
---      -- { name = 'ultisnips' }, -- For ultisnips users.
---      -- { name = 'snippy' }, -- For snippy users.
---    }, {
---      { name = 'buffer' },
---    })
---  })
-
------ nvim lsp (with cmp)
----- clangd (C/C++)
---local capabilities = require('cmp_nvim_lsp').default_capabilities()
---  -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
---require('lspconfig')['clangd'].setup {
---    capabilities = capabilities
---}
----- tsserver (Typescript)
---require'lspconfig'.tsserver.setup{}
----- HTML
---require'lspconfig'.html.setup{
---  capabilities = capabilities,
---}
+-- mason nvim --
+require("mason").setup()
+-- lspconfig --
