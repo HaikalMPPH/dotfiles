@@ -2,7 +2,7 @@ theme = "gruvbox_dark_hard"
 
 [editor]
 idle-timeout = 0
-completion-trigger-len = 10
+completion-trigger-len = 1
 auto-info = true
 true-color = true
 line-number = "relative"

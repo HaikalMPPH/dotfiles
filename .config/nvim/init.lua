@@ -26,15 +26,17 @@ require("lazy").setup({
   }                                            ,
   "bfrg/vim-cpp-modern"                        ,
   "neovim/nvim-lspconfig"                      ,
-  "williamboman/mason.nvim"                    ,
-  "williamboman/mason-lspconfig.nvim"          ,
   'hrsh7th/cmp-nvim-lsp'                       ,
   'hrsh7th/cmp-buffer'                         ,
   'hrsh7th/cmp-path'                           ,
   'hrsh7th/cmp-cmdline'                        ,
   'hrsh7th/nvim-cmp'                           ,
-  'vim-scripts/AutoComplPop'                   ,
-  'godlygeek/tabular'
+  'NLKNguyen/papercolor-theme'                 ,
+  'saadparwaiz1/cmp_luasnip' ,
+  --'vim-scripts/AutoComplPop'                   ,
+  "L3MON4D3/LuaSnip",
+  'godlygeek/tabular'                          ,
+  'Lokaltog/vim-powerline'
 })
 
 ----------------------
@@ -43,9 +45,9 @@ vim.cmd([[
   set           number
   set           relativenumber
   syntax        on
-  colorscheme   vim-material
-  set           tabstop=4
-  set           shiftwidth=4
+  colorscheme   nord
+  set           tabstop=2
+  set           shiftwidth=2
   set           expandtab
   set           termguicolors
   set           clipboard+=unnamedplus
@@ -54,8 +56,7 @@ vim.cmd([[
   tnoremap      <Esc>                                       <C-\><C-n>
   inoremap      <C-Space>                                   <C-p>
   set           colorcolumn=100
-  set           background=light
-  set           nowrap
+  set           background=dark
 
   nnoremap      <M-1> :tabn 1<CR>
   nnoremap      <M-2> :tabn 2<CR>
@@ -67,6 +68,7 @@ vim.cmd([[
   nnoremap      <M-8> :tabn 8<CR>
   nnoremap      <M-9> :tabn 9<CR>
   nnoremap      <M-0> :tabn 0<CR>
+  nnoremap      <C-t> :tabnew 0<CR>
 ]])
 
 -- leader keys
@@ -79,7 +81,60 @@ vim.keymap.set('n' , '<leader>fg' , builtin.live_grep  , {})
 vim.keymap.set('n' , '<leader>fb' , builtin.buffers    , {})
 vim.keymap.set('n' , '<leader>fh' , builtin.help_tags  , {})
 
+-- Add additional capabilities supported by nvim-cmp
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
--- mason nvim --
-require("mason").setup()
--- lspconfig --
+local lspconfig = require('lspconfig')
+
+-- Enable some language servers with the additional completion capabilities offered by nvim-cmp
+local servers = { 'clangd', 'tsserver', 'rust_analyzer', 'zls' }
+for _, lsp in ipairs(servers) do
+  lspconfig[lsp].setup {
+    -- on_attach = my_custom_on_attach,
+    capabilities = capabilities,
+  }
+end
+
+-- luasnip setup
+local luasnip = require 'luasnip'
+
+-- nvim-cmp setup
+local cmp = require 'cmp'
+cmp.setup {
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body)
+    end,
+  },
+  mapping = cmp.mapping.preset.insert({
+    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<CR>'] = cmp.mapping.confirm {
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true,
+    },
+    ['<Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      elseif luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+      else
+        fallback()
+      end
+    end, { 'i', 's' }),
+    ['<S-Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      elseif luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      else
+        fallback()
+      end
+    end, { 'i', 's' }),
+  }),
+  sources = cmp.config.sources({
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' },
+  }),
+}
