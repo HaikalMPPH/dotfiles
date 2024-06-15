@@ -50,7 +50,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xterm
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -225,7 +225,7 @@ set $cyan-color     #458588
 title_align center
 
 # window border
-# default_border          pixel 1
+default_border          pixel 1
 default_floating_border normal 10
 
 # windows will be floating by default
@@ -257,7 +257,10 @@ client.background         $fg-color
 #        separator_symbol "   "
 # }
 
-#polybar
+# dunst notification manager
+exec --no-startup-id dunst
+
+# polybar
 exec --no-startup-id polybar
 
 # fix the blackscreen when using integrated graphics
