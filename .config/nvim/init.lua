@@ -45,7 +45,7 @@ vim.cmd([[
   set           number
   set           relativenumber
   syntax        on
-  colorscheme   gruvbox
+  colorscheme   monokai_pro
   set           tabstop=2
   set           shiftwidth=2
   set           expandtab
