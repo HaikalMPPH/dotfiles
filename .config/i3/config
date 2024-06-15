@@ -50,7 +50,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec xterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -240,25 +240,25 @@ client.urgent         	  $red-color	  $bg-color	  $bg-color       $red-color    
 client.placeholder        $bg-color	  $bg-color	  $yellow-color   $bg-color	     	$bg-color
 client.background         $fg-color
 
-bar {
-       #i3bar_command i3bar --transparency
-        status_command i3status
-        font pango:JetBrainsMono Regular 8
-       #tray_output none
-       colors {
-              background $bg-color
-              statusline $fg-color 
-              separator  $cyan-color
+# bar {
+#        #i3bar_command i3bar --transparency
+#         status_command i3status
+#         font pango:JetBrainsMono Regular 8
+#        #tray_output none
+#        colors {
+#               background $bg-color
+#               statusline $fg-color 
+#               separator  $cyan-color
 
-              focused_workspace  $orange-color   $orange-color   $bg-color 
-              inactive_workspace $yellow-color   $yellow-color   $bg-color 
-              urgent_workspace   $red-color      $red-color      $bg-color 
-       }
-       separator_symbol "   "
-}
+#               focused_workspace  $orange-color   $orange-color   $bg-color 
+#               inactive_workspace $yellow-color   $yellow-color   $bg-color 
+#               urgent_workspace   $red-color      $red-color      $bg-color 
+#        }
+#        separator_symbol "   "
+# }
 
 #polybar
-#exec --no-startup-id polybar
+exec --no-startup-id polybar
 
 # fix the blackscreen when using integrated graphics
 exec xrandr --auto
