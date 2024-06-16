@@ -226,7 +226,7 @@ title_align center
 
 # window border
 default_border          pixel 3
-default_floating_border pixel 10
+default_floating_border pixel 3
 hide_edge_borders both
 
 # windows will be floating by default

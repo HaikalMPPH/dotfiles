@@ -36,7 +36,7 @@ require("lazy").setup({
   'vim-scripts/AutoComplPop'                   ,
   "L3MON4D3/LuaSnip",
   'godlygeek/tabular'                          ,
-  'Lokaltog/vim-powerline'
+  'vim-airline/vim-airline'
 })
 
 ----------------------
