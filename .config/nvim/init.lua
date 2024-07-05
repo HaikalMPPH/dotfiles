@@ -33,7 +33,7 @@ require("lazy").setup({
   'hrsh7th/nvim-cmp'                           ,
   'NLKNguyen/papercolor-theme'                 ,
   'saadparwaiz1/cmp_luasnip' ,
-  'vim-scripts/AutoComplPop'                   ,
+  --'vim-scripts/AutoComplPop'                   ,
   "L3MON4D3/LuaSnip",
   'godlygeek/tabular'                          ,
   'vim-airline/vim-airline'
@@ -46,8 +46,8 @@ vim.cmd([[
   set           relativenumber
   syntax        on
   colorscheme   monokai_pro
-  set           tabstop=2
-  set           shiftwidth=2
+  set           tabstop=4
+  set           shiftwidth=4
   set           expandtab
   set           termguicolors
   set           clipboard+=unnamedplus

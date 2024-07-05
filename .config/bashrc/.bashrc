@@ -12,7 +12,7 @@ alias grep='grep --color=auto'
 
 ## Custom alias
 alias bri='sudo brightnessctl set'
-alias limbat='sudo rmmod $HOME/Programs/acer-wmi-battery/acer-wmi-battery.ko; sudo insmod $HOME/Programs/acer-wmi-battery/acer-wmi-battery.ko enable_health_mode=1'
+alias limbat='sudo rmmod $HOME/Programs/acer-wmi-battery/acer-wmi-battery.ko; sudo insmod $HOME/Programs/acer-wmi-battery/acer-wmi-battery.ko enable_health_mode=1 | grep -i invalid;'
 alias limbat-disable='sudo rmmod $HOME/Programs/acer-wmi-battery/acer-wmi-battery.ko; sudo insmod $HOME/Programs/acer-wmi-battery/acer-wmi-battery.ko enable_health_mode=0'
 alias clr-trash='rm -r .local/share/Trash/files/*'
 alias readmode='redshift -O 3000'
