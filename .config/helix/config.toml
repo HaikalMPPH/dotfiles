@@ -8,6 +8,9 @@ true-color = true
 line-number = "relative"
 auto-completion = true
 
+[editor.statusline]
+center = ["version-control"]
+
 [editor.cursor-shape]
 insert = "bar"
 
